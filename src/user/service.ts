@@ -1,8 +1,9 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, Logger } from '@nestjs/common';
 
 @Injectable()
 export class UserService {
   getUserInfo(): string {
+    Logger.log('sss')
     return 'NestJs, GET user infos';
   }
 

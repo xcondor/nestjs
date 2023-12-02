@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Logger } from '@nestjs/common';
 import { UserService } from './service';
 import { CommonService } from 'src/common/service';
 @Controller('user')
@@ -10,6 +10,7 @@ export class UserController {
 
   @Get('info')
   getCats(): string {
+    Logger.log('nest logger')
     return this.UserService.getUserInfo();
   }
 
